@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.CalculatorPage"
              Title="CalculatorPage">
-
-    <Grid 
+    <Grid
         RowDefinitions="*,68,48,44,44,48,64,64,64,64"
         ColumnDefinitions="*,*,*,*,*">
 
@@ -12,26 +11,28 @@
         <BoxView
             VerticalOptions="Fill"
             HorizontalOptions="Fill"
-            BackgroundColor="#262D37"
+            BackgroundColor="#D67BFF"
             Grid.Row="1"
-            Grid.ColumnSpan="5"/>
-        
+            Grid.ColumnSpan="5"
+            />
+
         <!--Color Scientific Rows-->
-        <BoxView 
+        <BoxView
             VerticalOptions="Fill"
             HorizontalOptions="Fill"
-            BackgroundColor="#2C3240"
+            BackgroundColor="#FEFFAC"
             Grid.Row="2"
             Grid.RowSpan="4"
-            Grid.ColumnSpan="5"/>
-        
+            Grid.ColumnSpan="5"
+            />
+
         <!--Input Area-->
         <Frame 
             HasShadow="False"
             Padding="6,0,4,0"
-            Margin="12"
+            Margin="2"
             BorderColor="{StaticResource PrimaryColor}"
-            BackgroundColor="#2C3240"
+            BackgroundColor="#D67BFF"
             HorizontalOptions="EndAndExpand"
             VerticalOptions="EndAndExpand"
             Grid.Row="0"
@@ -47,11 +48,12 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+
         </Frame>
-        
+
         <!--Answer Row-->
         <Grid
-            ColumnDefinitions="Auto,*"
+            ColumnDefinitions="Auto, *"
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="5">
@@ -61,8 +63,8 @@
                 VerticalOptions="Center"
                 VerticalTextAlignment="Center"
                 Style="{StaticResource EqualsLabelStyle}"
-                Margin="16,0"/>
-
+                Margin="16,0"
+                />
             <Label 
                 Text="{Binding CalculatedResult, Mode=OneWay}"
                 VerticalOptions="Center"
@@ -72,9 +74,8 @@
                 Style="{StaticResource ResultLabelStyle}"
                 Margin="16,0"/>
         </Grid>
-        
+
         <!--Scientific Operators-->
-        
         <!--Row 1-->
         <Button
             Grid.Row="2"
@@ -82,7 +83,7 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="MEAN" />
+            Text="MEAN"/>
 
         <Button
             Grid.Row="2"
@@ -90,7 +91,7 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="MOD" />
+            Text="MOD"/>
 
         <Button
             Grid.Row="2"
@@ -98,7 +99,7 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="STD" />
+            Text="STD"/>
 
         <Button
             Grid.Row="2"
@@ -106,7 +107,7 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="VAR" />
+            Text="VAR"/>
 
         <Button
             Grid.Row="2"
@@ -114,7 +115,7 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="FACT" />
+            Text="FACT"/>
 
         <!--Row 2-->
         <Button
@@ -122,400 +123,314 @@
             Grid.Column="0"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="SIN" 
+            Text="SIN"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="SIN" />
+            CommandParameter="SIN"/>
+
 
         <Button
             Grid.Row="3"
             Grid.Column="1"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="COS" 
+            Text="COS"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="COS" />
+            CommandParameter="COS"/>
 
         <Button
             Grid.Row="3"
             Grid.Column="2"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="TAN" 
+            Text="TAN"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="TAN" />
+            CommandParameter="TAN"/>
 
         <Button
             Grid.Row="3"
             Grid.Column="3"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="LOG" 
+            Text="LOG"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="LOG" />
+            CommandParameter="LOG"/>
 
         <Button
             Grid.Row="3"
             Grid.Column="4"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="EXP" 
+            Text="EXP"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="EXP" />
-        
+            CommandParameter="EXP"/>
+
         <!--Row 3-->
+
         <Button
             Grid.Row="4"
             Grid.Column="0"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ASIN" 
+            Text="ASIN"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ASIN" />
+            CommandParameter="ASIN"/>
 
         <Button
             Grid.Row="4"
             Grid.Column="1"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ACOS" 
+            Text="ACOS"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ACOS" />
+            CommandParameter="ACOS"/>
 
         <Button
             Grid.Row="4"
             Grid.Column="2"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ATAN" 
+            Text="ATAN"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ATAN" />
+            CommandParameter="ATAN"/>
 
         <Button
             Grid.Row="4"
             Grid.Column="3"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="LOG10" 
+            Text="LOG10"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="LOG10" />
+            CommandParameter="LOG10"/>
 
         <Button
             Grid.Row="4"
             Grid.Column="4"
             ZIndex="1"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="POW" 
+            Text="POW"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="POW" />
-        
+            CommandParameter="POW"/>
+
         <!--Row 4-->
+
         <Button
             Grid.Row="5"
             Grid.Column="0"
             ZIndex="1"
+            Margin="6,6,6,10"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="SQRT" 
+            Text="SQRT"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="SQRT" />
+            CommandParameter="SQRT"/>
 
         <Button
             Grid.Row="5"
             Grid.Column="1"
             ZIndex="1"
+            Margin="6,6,6,10"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ABS" 
+            Text="ABS"
             Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ABS" />
+            CommandParameter="ABS"/>
 
         <Button
             Grid.Row="5"
             Grid.Column="2"
             ZIndex="1"
+            Margin="6,6,6,10"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="," 
+            Text=","
             Command="{Binding RegionOperatorCommand}"
-            CommandParameter="," />
+            CommandParameter=","/>
 
         <Button
             Grid.Row="5"
             Grid.Column="3"
             ZIndex="1"
+            Margin="6,6,6,10"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="(" 
+            Text="("
             Command="{Binding RegionOperatorCommand}"
-            CommandParameter="(" />
+            CommandParameter="("/>
 
         <Button
             Grid.Row="5"
             Grid.Column="4"
             ZIndex="1"
+            Margin="6,6,6,10"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text=")" 
+            Text=")"
             Command="{Binding RegionOperatorCommand}"
-            CommandParameter=")" />
-        
+            CommandParameter=")"/>
+
         <!--Math Operators-->
+
         <Button
             Grid.Row="6"
             Grid.Column="3"
             Grid.ColumnSpan="2"
             Style="{StaticResource OperatorButtonStyle}"
-            Text="AC" 
-            Command="{Binding ResetCommand}"/>
+            Text="AC"
+            Command="{Binding ResetCommand}"
+            />
 
         <Button
             Grid.Row="7"
             Grid.Column="3"
             Style="{StaticResource OperatorButtonStyle}"
-            Text="×" 
+            Text="×"
             Command="{Binding MathOperatorCommand}"
-            CommandParameter="×" />
+            CommandParameter="×"/>
 
         <Button
             Grid.Row="7"
             Grid.Column="4"
             Style="{StaticResource OperatorButtonStyle}"
-            Text="÷" 
+            Text="÷"
             Command="{Binding MathOperatorCommand}"
-            CommandParameter="÷" />
+            CommandParameter="÷"/>
 
         <Button
             Grid.Row="8"
             Grid.Column="3"
             Style="{StaticResource OperatorButtonStyle}"
-            Text="+" 
+            Text="+"
             Command="{Binding MathOperatorCommand}"
-            CommandParameter="+" />
+            CommandParameter="+"/>
 
         <Button
             Grid.Row="8"
             Grid.Column="4"
             Style="{StaticResource OperatorButtonStyle}"
-            Text="-" 
+            Text="-"
             Command="{Binding MathOperatorCommand}"
-            CommandParameter="-" />
+            CommandParameter="-"/>
 
         <Button
             Grid.Row="9"
             Grid.Column="3"
             Grid.ColumnSpan="2"
             Style="{StaticResource OperatorButtonStyle}"
-            Text="=" 
+            Text="="
             FontSize="28"
-            Command="{Binding CalculateCommand}"/>
+            Command="{Binding CalculateCommand}" />
+
+        <!--Numbers-->
 
         <Button
-        Grid.Row="6"
-        Grid.Column="0"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="1" 
-        Command="{Binding One}"/>
-
-        <Button
-        Grid.Row="6"
-        Grid.Column="1"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="2" 
-        Command="{Binding Two}"/>
-
-        <Button
-        Grid.Row="6"
-        Grid.Column="2"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="3" 
-        Command="{Binding Three}"/>
-
-        <Button
-        Grid.Row="7"
-        Grid.Column="0"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="4" 
-        Command="{Binding Four}"/>
-
-        <Button
-        Grid.Row="7"
-        Grid.Column="1"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="5" 
-        Command="{Binding Five}"/>
-
-        <Button
-        Grid.Row="7"
-        Grid.Column="2"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="6" 
-        Command="{Binding Six}"/>
-
-        <Button
-        Grid.Row="8"
-        Grid.Column="0"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="7" 
-        Command="{Binding Seven}"/>
-
-        <Button
-        Grid.Row="8"
-        Grid.Column="1"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="8" 
-        Command="{Binding Eight}"/>
-
-        <Button
-        Grid.Row="8"
-        Grid.Column="2"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="9" 
-        Command="{Binding Nine}"/>
-
-        <Button
-        Grid.Row="9"
-        Grid.Column="1"
-        ZIndex="1"
-        Margin="6,10,6,4"
-        Style="{StaticResource NumberButtonStyle}"
-        Text="0" 
-        Command="{Binding Zero}"/>
-        <Button
-    Grid.Row="6"
-    Grid.Column="0"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="7" 
-    Command="{Binding Seven}"/>
-
-<Button
-    Grid.Row="6"
-    Grid.Column="1"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="8" 
-    Command="{Binding Eight}"/>
-
-<Button
-    Grid.Row="6"
-    Grid.Column="2"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="9" 
-    Command="{Binding Nine}"/>
-
-<Button
-    Grid.Row="7"
-    Grid.Column="0"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="4" 
-    Command="{Binding Four}"/>
-
-<Button
-    Grid.Row="7"
-    Grid.Column="1"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="5" 
-    Command="{Binding Five}"/>
-
-<Button
-    Grid.Row="7"
-    Grid.Column="2"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="6" 
-    Command="{Binding Six}"/>
-
-<Button
-    Grid.Row="8"
-    Grid.Column="0"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="1" 
-    Command="{Binding One}"/>
-
-<Button
-    Grid.Row="8"
-    Grid.Column="1"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="2" 
-    Command="{Binding Two}"/>
-
-<Button
-    Grid.Row="8"
-    Grid.Column="2"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="3" 
-    Command="{Binding Three}"/>
-
-<Button
-    Grid.Row="9"
-    Grid.Column="0"
-    ZIndex="1"
-    Margin="6,10,6,4"
-    Style="{StaticResource NumberButtonStyle}"
-    Text="0" 
-    Command="{Binding Zero}"/>
-
-        <!-- ... (Other number buttons) ... -->
-        <Button
-            Grid.Row="9"
+            Grid.Row="6"
             Grid.Column="0"
             ZIndex="1"
-            Margin="6,10,6,4"
             Style="{StaticResource NumberButtonStyle}"
-            Text="0" 
-            Command="{Binding NumberInputCommand}"
-            CommandParameter="0" />
+            Text="7"
+            Command="{Binding NumberInputCommand}" 
+            CommandParameter="7"/>
 
         <Button
-            Grid.Row="9"
+            Grid.Row="6"
             Grid.Column="1"
             ZIndex="1"
-            Margin="6,10,6,4"
             Style="{StaticResource NumberButtonStyle}"
-            Text="." 
-            Command="{Binding NumberInputCommand}"
-            CommandParameter="." />
+            Text="8"
+            Command="{Binding NumberInputCommand}" 
+            CommandParameter="8"/>
 
-        <!--Backspace Button-->
+
+
         <Button
-            Grid.Row="9"
-            Grid.Column="2"
-            ZIndex="1"
-            Margin="6,10,6,4"
-            Style="{StaticResource NumberButtonStyle}"
-            Text="⌫" 
-            Command="{Binding BackspaceCommand}"/>
-        
-        
+                Grid.Row="6"
+                Grid.Column="2"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="9"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="9"/>
+
+        <Button
+                Grid.Row="7"
+                Grid.Column="0"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="4"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="4"/>
+
+        <Button
+                Grid.Row="7"
+                Grid.Column="1"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="5"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="5"/>
+
+        <Button
+                Grid.Row="7"
+                Grid.Column="2"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="6"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="6"/>
+
+        <Button
+                Grid.Row="8"
+                Grid.Column="0"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="1"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="1"/>
+
+        <Button
+                Grid.Row="8"
+                Grid.Column="1"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="2"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="2"/>
+
+        <Button
+                Grid.Row="8"
+                Grid.Column="2"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="3"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="3"/>
+
+        <Button
+                Grid.Row="9"
+                Grid.Column="0"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="0"
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="0"/>
+
+        <Button
+                Grid.Row="9"
+                Grid.Column="1"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="."
+                Command="{Binding NumberInputCommand}" 
+                CommandParameter="."/>
+
+        <Button
+                Grid.Row="9"
+                Grid.Column="2"
+                ZIndex="1"
+                Style="{StaticResource NumberButtonStyle}"
+                Text="⌫"
+                Command="{Binding BackspaceCommand}" 
+                />
+
+
+
 
     </Grid>
+
 
 </ContentPage>
