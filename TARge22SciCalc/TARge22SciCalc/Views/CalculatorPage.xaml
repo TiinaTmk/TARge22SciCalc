@@ -11,7 +11,7 @@
         <BoxView
             VerticalOptions="Fill"
             HorizontalOptions="Fill"
-            BackgroundColor="#D67BFF"
+            BackgroundColor="#F5347F"
             Grid.Row="1"
             Grid.ColumnSpan="5"
             />
@@ -20,7 +20,7 @@
         <BoxView
             VerticalOptions="Fill"
             HorizontalOptions="Fill"
-            BackgroundColor="#FEFFAC"
+            BackgroundColor="#FDD9F5"
             Grid.Row="2"
             Grid.RowSpan="4"
             Grid.ColumnSpan="5"
@@ -31,8 +31,8 @@
             HasShadow="False"
             Padding="6,0,4,0"
             Margin="2"
-            BorderColor="{StaticResource PrimaryColor}"
-            BackgroundColor="#D67BFF"
+            BorderColor="White"
+            BackgroundColor="#F5347F"
             HorizontalOptions="EndAndExpand"
             VerticalOptions="EndAndExpand"
             Grid.Row="0"

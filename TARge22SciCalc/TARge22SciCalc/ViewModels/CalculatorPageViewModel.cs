@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace ViewModels
@@ -100,7 +98,7 @@ namespace ViewModels
         [RelayCommand]
         private void MathOperator(string op)
         {
-            if (isSciOpWaiting)
+            if(isSciOpWaiting)
             {
                 InputText += ")";
                 isSciOpWaiting = false;
@@ -124,108 +122,6 @@ namespace ViewModels
         {
             InputText += $"{op}(";
             isSciOpWaiting = true;
-        }
-
-        [RelayCommand]
-        private void AC()
-        {
-            Reset();
-        }
-
-        [RelayCommand]
-        private void Multiply()
-        {
-            MathOperator("×");
-        }
-
-        [RelayCommand]
-        private void Divide()
-        {
-            MathOperator("÷");
-        }
-
-        [RelayCommand]
-        private void Add()
-        {
-            MathOperator("+");
-        }
-
-        [RelayCommand]
-        private void Subtract()
-        {
-            MathOperator("-");
-        }
-
-        [RelayCommand]
-        private void Equals()
-        {
-            Calculate();
-        }
-
-        [RelayCommand]
-        private void Dot()
-        {
-            NumberInput(".");
-        }
-
-        [RelayCommand]
-        private void Zero()
-        {
-            NumberInput("0");
-        }
-
-        [RelayCommand]
-        private void One()
-        {
-            NumberInput("1");
-        }
-
-        [RelayCommand]
-        private void Two()
-        {
-            NumberInput("2");
-        }
-
-        [RelayCommand]
-        private void Three()
-        {
-            NumberInput("3");
-        }
-
-        [RelayCommand]
-        private void Four()
-        {
-            NumberInput("4");
-        }
-
-        [RelayCommand]
-        private void Five()
-        {
-            NumberInput("5");
-        }
-
-        [RelayCommand]
-        private void Six()
-        {
-            NumberInput("6");
-        }
-
-        [RelayCommand]
-        private void Seven()
-        {
-            NumberInput("7");
-        }
-
-        [RelayCommand]
-        private void Eight()
-        {
-            NumberInput("8");
-        }
-
-        [RelayCommand]
-        private void Nine()
-        {
-            NumberInput("9");
         }
     }
 }
